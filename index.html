@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>WIST 11501 — Graduation Requirement Audit</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --navy:      #182D57;
@@ -39,7 +39,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   min-height: 100vh;
@@ -70,7 +70,7 @@ header {
   margin-bottom: 8px;
 }
 .header-title {
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.15;
@@ -98,7 +98,7 @@ header {
   text-align: center;
 }
 .rule-num {
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: var(--gold);
@@ -181,7 +181,7 @@ main { padding: 32px 48px; max-width: 1440px; }
 .stat-card.s-soc::after    { background: var(--soc-color); }
 .stat-card.s-lang::after   { background: var(--gold); }
 .stat-num {
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 1;
@@ -227,7 +227,7 @@ main { padding: 32px 48px; max-width: 1440px; }
   border-bottom: 1px solid var(--border-lt);
 }
 .grade-title {
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--navy);
@@ -302,7 +302,7 @@ main { padding: 32px 48px; max-width: 1440px; }
   color: var(--text);
   border-radius: 6px;
   padding: 8px 12px;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   outline: none;
   transition: border-color .15s;
@@ -316,7 +316,7 @@ main { padding: 32px 48px; max-width: 1440px; }
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .04em;
@@ -684,7 +684,7 @@ function drawChart(){
     const y=baseY-(pct/100)*maxH;
     ctx.strokeStyle='#eef0f6'; ctx.lineWidth=1; ctx.setLineDash([]);
     ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(cw,y); ctx.stroke();
-    ctx.fillStyle='#9aa3bb'; ctx.font='10px Source Sans 3'; ctx.textAlign='right';
+    ctx.fillStyle='#9aa3bb'; ctx.font='10px Roboto'; ctx.textAlign='right';
     ctx.fillText(pct+'%',32,y+3);
   });
 
@@ -703,11 +703,11 @@ function drawChart(){
       ctx.fillRect(x,y,bW-6,3);
       // Value label
       ctx.fillStyle=cat.color;
-      ctx.font='bold 11px Source Sans 3'; ctx.textAlign='center';
+      ctx.font='bold 11px Roboto'; ctx.textAlign='center';
       ctx.fillText(def,x+(bW-6)/2,y-4);
     });
     // Grade label
-    ctx.fillStyle='#182D57'; ctx.font='bold 12px Source Sans 3'; ctx.textAlign='center';
+    ctx.fillStyle='#182D57'; ctx.font='bold 12px Roboto'; ctx.textAlign='center';
     ctx.fillText('Grade '+g.slice(1),gi*gW+gW/2,baseY+18);
     // Separator
     if(gi>0){
